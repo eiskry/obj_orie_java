@@ -12,19 +12,22 @@ public class SimpleRobot  {
     }
     public void turnLeft(double degree) {
         setHeading(heading + degree);
+        // System.out.println(heading);
     }
     public void turnRight(double degree) {
         turnLeft(-degree);
+        // System.out.println(heading);
+
     }
     public void moveTo(double x, double y) {
         this.x = x;
         this.y = y;
-        System.out.println(x+" "+y);
+        System.out.println(x+" "+y); //最後
     }
     public void moveForward(double step) {
         double radian = heading / 180.0 * Math.PI;
-        System.out.println(x+" "+y);
+        System.out.println(x+" "+y); //最初
         moveTo(this.x + Math.cos(radian) * step,
-               this.y + Math.sin(radian) * step);
+            this.y + Math.sin(radian) * step);
     }
 }

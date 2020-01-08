@@ -10,9 +10,7 @@ public class RandomWalk {
                 } else {
                     robot.turnRight(20);
                 }
-                robot.moveForward(-100);
-                robot.turnLeft(20);             
-
+                robot.moveForward(10);
             }
         }
     }
