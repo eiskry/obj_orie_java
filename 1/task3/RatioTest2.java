@@ -30,19 +30,19 @@ public class RatioTest2 {
         }
         System.out.println(a.doubleValue());
     }
-    static void test3() {
-        Ratio x = two;
-        for (int i = 0; i < 22; i++) {
-            // x = 2 + ???
-            x = two.add(「(D)」) ;
-        }
-        System.out.println(x.subtract(one).doubleValue());
-    }
+    // static void test3() {
+    //     Ratio x = two;
+    //     for (int i = 0; i < 22; i++) {
+    //         // x = 2 + ???
+    //         x = two.add(「(D)」) ;
+    //     }
+    //     System.out.println(x.subtract(one).doubleValue());
+    // }
     public static void main(String[] args) {
         test1();
         System.out.println("-------------------------");
         test2();
         System.out.println("-------------------------");
-        test3();
+        // test3();
     }
 }
