@@ -6,6 +6,6 @@ class CircleShape extends Shape {
         this.r = r;
     }
     boolean inside(double x, double y) {
-        return 「式１」;
+        return (x-x0)*(x-x0)+(y-y0)*(y-y0)<=r*r;
     }
 }
