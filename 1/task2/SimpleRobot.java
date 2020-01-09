@@ -9,14 +9,13 @@ public class SimpleRobot  {
     }
     public void setHeading(double heading) {
         this.heading = heading;
+        // System.out.println(heading);
     }
     public void turnLeft(double degree) {
         setHeading(heading + degree);
-        // System.out.println(heading);
     }
     public void turnRight(double degree) {
         turnLeft(-degree);
-        // System.out.println(heading);
 
     }
     public void moveTo(double x, double y) {
