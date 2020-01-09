@@ -6,6 +6,11 @@ public class DotViewTest {
         for (int i = 0; i < 3; i++) {
             robot.moveForward(100);
             robot.turnLeft(90);
+            // robot.turnLeft(120);
         }
+        // robot.turnLeft(120);
+        // robot.moveForward(50);
+        // robot.turnLeft(90);
+        // robot.moveForward(100);
     }
 }
