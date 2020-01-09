@@ -8,18 +8,42 @@ public class DotView implements RobotView {
     public void turn(double oldHeading, double newHeading){
     }
     
-    public void move(double oldX, double oldY,
-                        double newX, double newY){
+    public void move(double oldX, double oldY,double newX, double newY){
+        // System.out.println(oldX+" "+ oldY);
+        // System.out.println(newX+" "+ newY);
 
-        double x=(newX-oldX)/5.0;
-        double y=(newY-oldY)/5.0;
-        System.out.println(oldX+" "+ oldY);
+        //何等分するか
+        int t=5;
         
-        System.out.println(x+" "+ y);
-        System.out.println(x*2+" "+ y*2);
-        System.out.println(x*3+" "+ y*3);
-        System.out.println(x*4+" "+ x*4);
+        //移動する前、移動した後を結ぶ直線
+        //y=Ax+B
+        double A=(newY-oldX)/(newX-oldX);
+        double B=oldY-A*oldX;
 
-        System.out.println(newX+" "+ newY);
+
+        //y軸と平行
+        if (newX==oldX){
+            for(int i=0;i<t;i++){
+                double Y =(newY-oldY)/t*i;
+                System.out.println(oldX+" "+(oldY+Y));
+            }
+            System.out.println(newX+" "+newY);
+        }
+        //x軸と平行
+        else if(newY==oldY){
+            for(int i=0;i<t;i++){
+                double X =(newX-oldX)/t*i;
+                System.out.println((oldX+X)+" "+newY);
+            }
+            System.out.println(newX+" "+newY);
+        }
+        //直線
+        else {
+            for(int i=0;i<t;i++){
+                double X =(newX-oldX)/t*i;
+                System.out.println((oldX+X)+" "+A*(oldX+X)+B);
+            }
+            System.out.println(newX+" "+newY);
+        }
     }
 }
