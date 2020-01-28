@@ -1,14 +1,13 @@
 import java.util.*;
 
-class WordCount {
+class WordSetCount {
     public static void main(String[] args) {
       Scanner input = new Scanner(System.in);
-      int count = 0;
-      while (input.hasNext()) {
-          input.next();  // トークン(単語)をひとつ読む．読んだ結果は使わない．
-          
-          count++;
+
+      Set<String> set = new HashSet<String>() ;
+      while (input.hasNext()) {    
+        set.add(input.next());
       }
-      System.out.println (count + " words.");
+      System.out.println (set.size() + " words.");
   }
 }
