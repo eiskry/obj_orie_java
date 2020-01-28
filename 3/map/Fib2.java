@@ -9,9 +9,8 @@ public class Fib2 {
         } else if (map.containsKey(n)){
             return map.get(n);
         } else {
-            // int result =(map.get(n-1)+map.get(n-2)) % 10000;
-            map.put(n,(map.get(n-1)+map.get(n-2)) % 10000);
-            // return result;
+            int result=(fib(n-1)+fib(n-2)) % 10000;
+            map.put(n,result);
             return map.get(n);
         }
     }
