@@ -6,7 +6,7 @@ public class FibLog {
             return 1;
         } else {
             int [][] base={{0,1},{1,1}};
-            int [][] temp={{0,1},{1,1}};
+            int [][] temp={{0,0},{0,0}};
             int [][] result={{0,1},{1,1}};
             for (int l=3;l<n-1;l++){
                 for (int x=0;x<2;x++){
@@ -14,15 +14,17 @@ public class FibLog {
                         temp[x][y]=result[x][y];
                     }
                 }
-                for (int i = 0; i < 2; i++) {
-                    for (int j = 0; j < 2; j++) {
-                        for (int k = 0; k < 2; k++) {
-                            result[i][j] = base[i][k] * temp[k][j] + result[i][j];
-                        }
-                    }
-                }
+                result[0][0]=temp[0][0]*base[0][0]+temp[0][1]*base[1][0];
+                result[0][1]=temp[0][0]*base[0][1]+temp[0][1]*base[1][1];
+                result[1][0]=temp[1][0]*base[0][0]+temp[1][1]*base[1][0];
+                result[1][1]=temp[1][0]*base[1][0]+temp[1][1]*base[1][1];
             }
-            return ((result[0][0])+2*result[0][1])%10000;
+            // for (int x=0;x<2;x++){
+            //         for (int y=0;y<2;y++){
+            //         System.out.print(result[x][y]);
+            //         }
+            //     }
+            return (result[0][0]+result[0][1])%10000;
         }
     }
     public static void main(String[] args) {
@@ -34,7 +36,7 @@ public class FibLog {
         System.out.println((end - start) / 1000 + "us");
         // for (int x=0;x<2;x++){
         //     for (int y=0;y<2;y++){
-        //     System.out.print(base[x][y]);
+        //     System.out.print(temp[x][y]);
         //     }
         // }
     }
