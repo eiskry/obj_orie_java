@@ -1,0 +1,18 @@
+$ java Fraction 100 4
+100/4 = 25
+$ java Fraction 10 4
+10/4 = 2.5
+$ java Fraction 100 3
+100/3 = 33.3
+           ^
+$ java Fraction 100 7
+100/7 = 14.285714
+           ^^^^^^
+$ java Fraction 1 7
+1/7 = 0.142857
+        ^^^^^^
+$ java Fraction 1 170
+1/170 = 0.00588235294117647
+           ^^^^^^^^^^^^^^^^
+$ java Fraction 1 379721
+(略)
