@@ -17,14 +17,18 @@ public class Fraction {
         // double n = (double)y;
         double q = 0;
         double q_ = 0;
-        for (int i=0; i<15; i++) {
+        for (int i=0; i<40; i++) {
+            System.out.println("No."+i);
             int tmp_q =m/n; //暫定的商
-            // System.out.println(tmp_q);
+            System.out.println("tmp_q: "+tmp_q);
             int tmp_r =m%n; //暫定的余り
-            // System.out.println(tmp_r);
-            // System.out.println(tmp_q/power(10, i));
-            q = q_ + tmp_q/power(10, i); //解
-            // System.out.println(q);
+            System.out.println("tmp_r: "+tmp_r);
+            System.out.println(power(10, i));
+            double add =(double)tmp_q/power(10, i);
+            System.out.println("add: "+add);
+            q = q_ + add; //解
+            System.out.println("q: "+q);
+            System.out.println("___________");
 
             //余りが0
             if(tmp_r==0){

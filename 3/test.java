@@ -7,9 +7,9 @@ class test{
         return answer;
     }
   public static void main(String args[]){
-    double k =power(10,1);
-    System.out.println(1/k);
-    double l = (double)1/(double)170;
+    double k =power(10,5);
+    System.out.println(k);
+    double l = (double)140/k;
     System.out.println(l);
     
   }
