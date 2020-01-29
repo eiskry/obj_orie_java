@@ -1,11 +1,14 @@
 class test{
+    static int power(int x, int y){
+        int answer =1;
+        for (int i=0;i<y;i++){
+            answer *=x;
+        }
+        return answer;
+    }
   public static void main(String args[]){
-    int i = 7;
-
-    double f1 = (double)i / 3;
-    double f2 = (double)(i / 3);
-
-    System.out.println("f1 = " + f1);
-    System.out.println("f2 = " + f2);
+    int k =power(10,0);
+    System.out.println(k);
+    
   }
 }
