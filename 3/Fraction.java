@@ -1,10 +1,12 @@
 import java.util.*;
 import java.io.*;
 
-class Fraction{
+public class Fraction{
 
-    static long calcu(int m, int n){
-        
+    static long calcu(int m, int n) {
+        if((m%n)==0){
+            return m/n;
+        }
     }
     public static void main(String[] args){
         if (args.length == 2) {
@@ -13,6 +15,8 @@ class Fraction{
             int i1 = inte1.intValue();
             int i2 = inte2.intValue();
             System.out.println("Calculate "+ i1+" / "+i2);
+            long answer=calcu(i1,i2);
+            System.out.println(answer);
         } else System.out.println("Please input two number!");
     }   
 }
