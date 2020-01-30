@@ -7,6 +7,7 @@ public class OOCalc {
         abstract public void exec(Deque<Integer> stack);
     }
 
+    //stackの中身を表示するオペレーション
     class PrintOp extends Op {
         public String opName() { return "="; }
         public void exec(Deque<Integer> stack) {
@@ -15,7 +16,8 @@ public class OOCalc {
             }
         }
     }
-    
+
+    //
     abstract class BinOp extends Op {
         abstract public int op(int rand1, int rand2);
         public void exec(Deque<Integer> stack) {
@@ -24,28 +26,34 @@ public class OOCalc {
             stack.push(op(v1, v2));
         }
     }
+
     class AddOp extends BinOp {
         public String opName() { return "+"; }
         public int op(int rand1, int rand2) { return rand1 + rand2; }
     }
+
     class SubOp extends BinOp {
         public String opName() { return "-"; }
         public int op(int rand1, int rand2) { return rand1 - rand2; }
     }
+
     class MulOp extends BinOp {
         public String opName() { return "*"; }
         public int op(int rand1, int rand2) { return rand1 * rand2; }
     }
+
     class DivOp extends BinOp {
         public String opName() { return "/"; }
         public int op(int rand1, int rand2) { return rand1 / rand2; }
     }
+
     // 命令一覧表
     Op[] optable = {new AddOp(), new SubOp(), new MulOp(), new DivOp(), 
                     new PrintOp()};
     Deque<Integer> stack;
     Scanner scanner;
     Map<String, Op> ops;  // 単語辞書
+    
     OOCalc() {
         stack = new LinkedList<Integer>();
         scanner = new Scanner(System.in);
@@ -55,6 +63,7 @@ public class OOCalc {
             ops.put(op.opName(), op);
         }
     }
+
     public void run() {
         while (scanner.hasNext()) {
             if (scanner.hasNextInt()) {
@@ -73,6 +82,7 @@ public class OOCalc {
             }
         }
     }
+    
     public static void main(String[] args) {
         new OOCalc().run();
     }

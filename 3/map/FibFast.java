@@ -19,10 +19,9 @@ class FibFast {
 		return f[n]; 
 	} 
 	
-	/* Driver program to test above function */
 	public static void main(String[] args) 
 	{ 
-		int n = 44; 
+		int n = Integer.parseInt(args[0]);
         f= new int[MAX]; 
         long start = System.nanoTime();
         int value = fib(n);
@@ -31,6 +30,3 @@ class FibFast {
         System.out.println((end - start) / 1000 + "us");
 	} 
 } 
-	
-// This code is contributed by Arnav Kr. Mandal. 
-

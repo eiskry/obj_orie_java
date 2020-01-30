@@ -1,4 +1,3 @@
-//Fibonacci Series using Optimized Method 
 class FibOpt 
 { 
 	static int fib(int n) 
@@ -7,7 +6,7 @@ class FibOpt
 	if (n == 0) return 0; 
 	power(F, n-1); 
 	
-	return (F[0][0]+F[0][1])%1000; 
+	return (F[0][0]+F[0][1])%10000; 
 	} 
 	
 	static void multiply(int F[][], int M[][]) 
@@ -36,7 +35,6 @@ class FibOpt
        multiply(F, M); 
     } 
 	
-	/* Driver program to test above function */
 	public static void main (String args[]) 
 	{ 
         int n = Integer.parseInt(args[0]);
@@ -48,5 +46,4 @@ class FibOpt
 
 	} 
 } 
-/* This code is contributed by Rajat Mishra */
 
