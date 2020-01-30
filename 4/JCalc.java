@@ -11,7 +11,7 @@ public class JCalc extends OOCalc {
     JCalc() {
        for (String[] pair : alias) {
           ops.put("noop", new NoOp());
-          ops.put(..., ...);
+          ops.put("足す", ...);
        }
     }
     public static void main(String[] args) {
