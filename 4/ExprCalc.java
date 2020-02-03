@@ -12,7 +12,26 @@ public class ExprCalc extends OOGCalc<ExprCalc.Tree> {
         public String toString() { return Integer.toString(value); }
     }
     class Node extends Tree {
-        ...
+        Tree right;
+        Tree left;
+        String operator;
+        Node (String operator, Tree left, Tree right) {
+            this.operator = operator;
+            this.left = left;
+            this.right = right;
+        }
+        public String toString() {
+            return ("("
+                    + left.toString()
+                    + operator
+                    + right.toString()
+                    +")");
+        }
     }
-   ...
+    protected Tree fromInt(int v) {
+        return new Leaf(v);
+    }
+    public static void main(String[] args) {
+        new ExprCalc().run();
+    }
 }
