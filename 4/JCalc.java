@@ -9,10 +9,9 @@ public class JCalc extends OOCalc {
     
     //ops:単語辞書　Map<String, Op> ops; 
     JCalc() {
-       for (String[] pair : alias) {
-          ops.put("noop", new NoOp());
-          ops.put("足す", ...);
-       }
+        for (String[] pair : alias) {
+            ops.put(pair [0] , ops.get (pair [1]));
+        }
     }
     public static void main(String[] args) {
         new JCalc().run();
