@@ -1,9 +1,9 @@
 import java.util.*;
 
 public class JCalc extends OOCalc {
-    class NoOp extends Op {
+    // class NoOp extends Op {
     
-    }
+    // }
     String[][] alias = {{"足す", "+"}, {"引く", "-"}, {"かける", "*"}, {"割る", "/"},
                         {"から", "noop"}, {"と", "noop"}, {"を", "noop"}, {"で", "noop"}};
     
