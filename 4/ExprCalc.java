@@ -14,16 +14,16 @@ public class ExprCalc extends OOGCalc<ExprCalc.Tree> {
     class Node extends Tree {
         Tree right;
         Tree left;
-        String operator;
-        Node (String operator, Tree left, Tree right) {
-            this.operator = operator;
+        String value;
+        Node (String value, Tree left, Tree right) {
+            this.value = value;
             this.left = left;
             this.right = right;
         }
         public String toString() {
             return ("("
                     + left.toString()
-                    + operator
+                    + value
                     + right.toString()
                     +")");
         }

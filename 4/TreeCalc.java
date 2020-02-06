@@ -5,19 +5,10 @@ public class TreeCalc extends OOGCalc<TreeCalc.Tree> {
     RatioCalc ratcalc = new RatioCalc();
     abstract class Tree implements Numeric<Tree> {
         public Tree add(Tree t) { return new Node(ratcalc.ADD_OP, this, t); }
-        public Tree subtract(Tree t) {
-            return new Node(ratcalc.SUB_OP, this, t);
-        }
-
-        public Tree multiply(Tree t) {
-            return new Node(ratcalc.MUL_OP, this, t);
-        }
-
-        public Tree divide(Tree t) {
-            return new Node(ratcalc.DIV_OP, this, t);
-        }
-        abstract RatioCalc.Rat eval ();
-    }
+        public Tree subtract(Tree t) { return new Node(ratcalc.SUB_OP, this, t);}
+        public Tree multiply(Tree t) { return new Node(ratcalc.MUL_OP, this, t);}
+        public Tree divide(Tree t) {return new Node(ratcalc.DIV_OP, this, t); }
+        abstract RatioCalc.Rat eval ();}
     class Leaf extends Tree {
         int value;
         Leaf(int value) { this.value = value; }
