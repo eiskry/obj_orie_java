@@ -21,11 +21,7 @@ public class ExprCalc extends OOGCalc<ExprCalc.Tree> {
             this.right = right;
         }
         public String toString() {
-            return ("("
-                    + left.toString()
-                    + value
-                    + right.toString()
-                    +")");
+            return ("("+ left.toString()+ value+ right.toString()+")");
         }
     }
     protected Tree fromInt(int v) {
