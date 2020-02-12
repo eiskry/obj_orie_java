@@ -4,35 +4,18 @@ public class Stacola extends LCalc {
     ScreenView view;
   
     class ForwardOp extends Op {
-      public String opName () {
-        return "進む";
-      }
-      public void exec () {
-        robot.moveForward (state.stack.pop ());
-      }
+      public String opName () {return "進む";}
+      public void exec () {robot.moveForward (state.stack.pop ());}
     }
     class RightOp extends Op {
-      public String opName () {
-        return "右へ回る";
-      }
-      public void exec () {
-        robot.turnRight (state.stack.pop ());
-      }
+      public String opName () {return "右へ回る";}
+      public void exec () {robot.turnRight (state.stack.pop ());}
     }
-  
     class LeftOp extends Op {
-      public String opName () {
-        return "左へ回る";
-      }
-      public void exec () {
-        robot.turnLeft (state.stack.pop ());
-      }
+      public String opName () {return "左へ回る";}
+      public void exec () {obot.turnLeft (state.stack.pop ());}
     }
-  
-    class RepeatOp extends Op {
-      public String opName () {
-        return "繰り返す";
-      }
+    class RepeatOp extends Op {public String opName () {return "繰り返す";}
       public void exec () {
         Program p = state.pstack.pop ();
         double j = state.stack.pop ();
