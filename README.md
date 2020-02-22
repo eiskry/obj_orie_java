@@ -1,3 +1,3 @@
 # object_oriented_programming_java
 オブジェクト指向プログラミング
-二年秋学期
+二年秋学期C
