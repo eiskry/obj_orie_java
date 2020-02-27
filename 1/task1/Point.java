@@ -7,4 +7,7 @@ public class Point {
     void printPoint() {
         System.out.println("座標(" + x + ", " + y + ")");
     }
+
+
+
 }
